@@ -5,8 +5,7 @@ import { ICON_BAR_TABS } from "@/features/invoice-editor/constants/layout"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 
-const IconsBar = () => {
-  const activeTab = ICON_BAR_TABS[0].id
+const IconsBar = ({ activeTab }: { activeTab: string }) => {
   return (
     <div className="h-full w-20 shrink-0 flex-col items-center justify-center border-r border-sidebar-border bg-sidebar py-4 text-white">
       <Link

@@ -49,7 +49,7 @@ const InvoiceTab = () => {
                 <Button
                   key={status.value}
                   variant="outline"
-                  className="justify-start gap-3"
+                  className="justify-start gap-1.5"
                   style={
                     isActive
                       ? {
