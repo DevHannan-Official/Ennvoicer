@@ -4,19 +4,17 @@ import { RefreshCw } from "lucide-react"
 import { FieldGroup } from "@/components/ui/field"
 import { Label } from "@/components/ui/label"
 import { ToggleGroup } from "@/components/ui/toggle-group"
-import { INVOICE_STATUSES } from "@/features/invoice-editor/constants/layout"
-import { cn } from "@/lib/utils"
+import {
+  INVOICE_STATUSES,
+  SECTION_META,
+} from "@/features/invoice-editor/constants/layout"
+import TabHeader from "../components/tab-header"
 
 const InvoiceTab = () => {
   const currentStatus = "paid"
   return (
     <>
-      <header className="mb-4 border-b border-border pb-4">
-        <h3 className="text-lg font-medium">Invoice</h3>
-        <p className="text-xs text-muted-foreground">
-          Numbers, dates, currency and status
-        </p>
-      </header>
+      <TabHeader meta={SECTION_META.invoice} />
       <div className="space-y-4">
         <InputField label="Invoice Title" placeholder="Untitled" />
         <InputField label="Invoice Number" placeholder="e.g. INV-001">

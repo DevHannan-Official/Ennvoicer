@@ -5,3 +5,12 @@ export interface IconBarTab {
   label: string
   icon: LucideIcon
 }
+
+export type EditorTabs =
+  | "invoice"
+  | "business"
+  | "recipient"
+  | "items"
+  | "design"
+  | "review"
+

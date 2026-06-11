@@ -26,7 +26,7 @@ const IconsBar = ({ activeTab }: { activeTab: string }) => {
             key={tab.id}
             variant="ghost"
             className={cn(
-              "h-16 w-16 flex-col gap-2 rounded-md border",
+              "h-16 w-16 flex-col gap-2 rounded-lg border",
               tab.id === activeTab
                 ? "border-sidebar-ring bg-sidebar-accent text-sidebar-primary hover:bg-sidebar-accent hover:text-sidebar-primary"
                 : "border-transparent text-sidebar-foreground hover:bg-transparent hover:text-white"

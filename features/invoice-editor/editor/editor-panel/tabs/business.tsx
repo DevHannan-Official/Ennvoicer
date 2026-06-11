@@ -5,16 +5,13 @@ import { Label } from "@/components/ui/label"
 import { ImagePlus } from "lucide-react"
 import { InputField, TextAreaField } from "../components/fields"
 import { Separator } from "@/components/ui/separator"
+import TabHeader from "../components/tab-header"
+import { SECTION_META } from "@/features/invoice-editor/constants/layout"
 
 const BusinessTab = () => {
   return (
     <>
-      <header className="mb-4 border-b border-border pb-4">
-        <h3 className="text-lg font-medium">Business</h3>
-        <p className="text-xs text-muted-foreground">
-          Your business details & logo
-        </p>
-      </header>
+      <TabHeader meta={SECTION_META.business} />
       <div className="space-y-4">
         <Field>
           <Label>Logo</Label>

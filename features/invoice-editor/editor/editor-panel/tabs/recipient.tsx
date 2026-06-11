@@ -1,16 +1,13 @@
 import { FieldGroup } from "@/components/ui/field"
 import { InputField, TextAreaField } from "../components/fields"
-import { Separator } from "@/components/ui/separator";
+import { Separator } from "@/components/ui/separator"
+import TabHeader from "../components/tab-header"
+import { SECTION_META } from "@/features/invoice-editor/constants/layout"
 
 const RecipientTab = () => {
   return (
     <>
-      <header className="mb-4 border-b border-border pb-4">
-        <h3 className="text-lg font-medium">Recipient</h3>
-        <p className="text-xs text-muted-foreground">
-          Client Billing Information
-        </p>
-      </header>
+      <TabHeader meta={SECTION_META.recipient} />
       <div className="space-y-4">
         <FieldGroup>
           <InputField label="Client Name" placeholder="e.g. Jane Smith" />
@@ -33,7 +30,10 @@ const RecipientTab = () => {
           placeholder="e.g. 456 Market Street, City, Country"
         />
         <Separator />
-        <TextAreaField label="Notes to Client" placeholder="e.g. Payment is due within 30 days. Bank transfer preferred." />
+        <TextAreaField
+          label="Notes to Client"
+          placeholder="e.g. Payment is due within 30 days. Bank transfer preferred."
+        />
       </div>
     </>
   )

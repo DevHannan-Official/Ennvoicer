@@ -5,6 +5,8 @@ import { Label } from "@/components/ui/label"
 import { Separator } from "@/components/ui/separator"
 import { LineItem } from "@/features/invoice-editor/types/invoice"
 import { ChevronDown, ChevronUp, Copy, Plus, Trash2 } from "lucide-react"
+import TabHeader from "../components/tab-header"
+import { SECTION_META } from "@/features/invoice-editor/constants/layout"
 
 interface itemCardData {
   item: LineItem
@@ -109,15 +111,10 @@ const ItemsTab = () => {
   ]
   return (
     <>
-      <header className="mb-4 border-b border-border pb-4">
-        <h3 className="text-lg font-medium">Items</h3>
-        <p className="text-xs text-muted-foreground">
-          Services, products and fees
-        </p>
-      </header>
+      <TabHeader meta={SECTION_META.items} />
       <div className="space-y-4">
         {items.map((item, idx) => (
-          <ItemCard item={item} index={idx} />
+          <ItemCard item={item} key={idx} index={idx} />
         ))}
         <Button variant="outline" className="w-full border-dashed">
           <Plus /> Add Item

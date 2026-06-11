@@ -19,6 +19,8 @@ const buttonVariants = cva(
         destructive:
           "bg-transparent text-destructive hover:bg-destructive/5 focus-visible:border-destructive/40 focus-visible:ring-destructive/20 dark:bg-destructive/20 dark:hover:bg-destructive/30 dark:focus-visible:ring-destructive/40",
         link: "text-primary underline-offset-4 hover:underline",
+        radio:
+          "rounded-sm border-foreground/15 bg-muted/80 hover:border-primary hover:bg-muted",
       },
       size: {
         default:
@@ -26,6 +28,8 @@ const buttonVariants = cva(
         xs: "h-6 gap-1 rounded-[min(var(--radius-md),8px)] px-2 text-xs in-data-[slot=button-group]:rounded-md has-data-[icon=inline-end]:pr-1.5 has-data-[icon=inline-start]:pl-1.5 [&_svg:not([class*='size-'])]:size-3",
         sm: "h-8 gap-1 rounded-[min(var(--radius-md),10px)] px-2.5 in-data-[slot=button-group]:rounded-md has-data-[icon=inline-end]:pr-1.5 has-data-[icon=inline-start]:pl-1.5",
         lg: "h-10 gap-1.5 px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2",
+        radio:
+          "h-10 w-full flex-col items-start gap-1.5 px-4 py-8 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2",
         icon: "size-9",
         "icon-xs":
           "size-6 rounded-[min(var(--radius-md),8px)] in-data-[slot=button-group]:rounded-md [&_svg:not([class*='size-'])]:size-3",
